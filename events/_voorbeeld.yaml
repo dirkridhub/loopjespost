@@ -1,0 +1,26 @@
+# Example event file. Copy this to events/<id>.yaml.
+# Leave a field empty (or "onbekend") when you don't know it. Never guess.
+
+id: voorbeeldloop              # short name, no spaces, same as the file name
+naam: Voorbeeldloop
+plaats: Oosterbeek
+provincie: Gelderland
+
+datum_loopje: 2027-03-14       # date of the next edition (YYYY-MM-DD)
+afstanden_km: [5, 10, 21.1]
+
+website: https://www.voorbeeldloop.nl
+inschrijfpagina: https://www.voorbeeldloop.nl/inschrijven
+
+inschrijving:
+  status: onbekend             # nog_niet_open | open | vol | onbekend
+  opent_datum:                 # YYYY-MM-DD, empty if unknown
+  opent_tijd:                  # HH:MM (e.g. "00:00" for midnight), empty if unknown
+
+bron:
+  url:                         # page the dates come from
+  zin:                         # one short sentence from that page
+  gecontroleerd_op:            # YYYY-MM-DD
+
+verkoopt_vaak_uit: false
+notities: ""
