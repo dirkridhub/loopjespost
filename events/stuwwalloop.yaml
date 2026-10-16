@@ -1,0 +1,23 @@
+id: stuwwalloop
+naam: Stuwwalloop
+plaats: Oosterbeek
+provincie: Gelderland
+
+datum_loopje:                  # 2027 edition not announced yet (checked 2026-10-16)
+afstanden_km: [5, 10, 11, 21]  # plus kidsrun; 11 and 21 km are trails
+
+website: https://www.stuwwalloop.nl/
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: false
+notities: "Editie 2026 was op zaterdag 30 mei. Eerste testloopje van de monitor."

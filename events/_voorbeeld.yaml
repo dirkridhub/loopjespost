@@ -12,6 +12,8 @@ afstanden_km: [5, 10, 21.1]
 website: https://www.voorbeeldloop.nl
 inschrijfpagina: https://www.voorbeeldloop.nl/inschrijven
 
+# Usually leave this block empty: the monitor stores what it finds in data/state/<id>.json.
+# Fill it in yourself only to correct the monitor; your value then wins.
 inschrijving:
   status: onbekend             # nog_niet_open | open | vol | onbekend
   opent_datum:                 # YYYY-MM-DD, empty if unknown

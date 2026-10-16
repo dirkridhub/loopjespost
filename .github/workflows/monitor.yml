@@ -1,0 +1,45 @@
+name: Dagelijkse controle
+
+on:
+  schedule:
+    # 03:00 UTC = 05:00 in summer, 04:00 in winter (Dutch time). Scheduled runs may start late.
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Tests
+        run: pytest -q
+
+      - name: Check races
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m loopjespost.monitor
+
+      - name: Save results
+        run: |
+          git config user.name "loopjespost-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Update race status $(date -u +%F)"
+          git push

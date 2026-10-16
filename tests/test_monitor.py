@@ -1,0 +1,152 @@
+import json
+from pathlib import Path
+
+import pytest
+
+from loopjespost.extract import fingerprint, main_text
+from loopjespost.monitor import check_event
+
+FIXTURES = Path(__file__).parent / "fixtures" / "stuwwalloop"
+HOME = (FIXTURES / "home.html").read_text(encoding="utf-8")
+HOME_2027 = (FIXTURES / "home_2027_aangekondigd.html").read_text(encoding="utf-8")
+
+EVENT = {
+    "id": "stuwwalloop",
+    "naam": "Stuwwalloop",
+    "plaats": "Oosterbeek",
+    "provincie": "Gelderland",
+    "website": "https://www.stuwwalloop.nl/",
+}
+
+
+def field(waarde, zekerheid="hoog", bron_zin=""):
+    return {"waarde": waarde, "zekerheid": zekerheid, "bron_zin": bron_zin}
+
+
+UNKNOWN_RESULT = {
+    "datum_loopje": field("", "laag"),
+    "inschrijving_status": field("onbekend", "laag"),
+    "inschrijving_opent_datum": field("", "laag"),
+    "inschrijving_opent_tijd": field("", "laag"),
+}
+
+ANNOUNCED_RESULT = {
+    "datum_loopje": field("2027-05-29", "hoog", "2027 zaterdag 29 mei"),
+    "inschrijving_status": field("nog_niet_open", "hoog",
+                                 "De inschrijving opent op dinsdag 1 december 2026 om 20:00 uur."),
+    "inschrijving_opent_datum": field("2026-12-01", "hoog",
+                                      "De inschrijving opent op dinsdag 1 december 2026 om 20:00 uur."),
+    "inschrijving_opent_tijd": field("20:00", "hoog",
+                                     "De inschrijving opent op dinsdag 1 december 2026 om 20:00 uur."),
+}
+
+
+class FakeAI:
+    def __init__(self, *results):
+        self.results = list(results)
+        self.calls = 0
+
+    def __call__(self, text, name, today):
+        self.calls += 1
+        return self.results.pop(0), {"input_tokens": 1000, "output_tokens": 100}
+
+
+class FakeIssues:
+    def __init__(self):
+        self.opened = []
+
+    def __call__(self, title, body):
+        self.opened.append((title, body))
+        return f"https://github.com/example/issues/{len(self.opened)}"
+
+
+def run(tmp_path, html, ai, issues=None, today="2026-10-16"):
+    return check_event(
+        EVENT,
+        fetch=lambda url: html,
+        read=ai,
+        open_issue=issues or FakeIssues(),
+        data_dir=tmp_path,
+        today=today,
+    )
+
+
+def state(tmp_path):
+    return json.loads((tmp_path / "state" / "stuwwalloop.json").read_text(encoding="utf-8"))
+
+
+def test_main_text_drops_menu_but_keeps_content():
+    text = main_text(HOME)
+    assert "2026 zaterdag 30 mei" in text
+    assert "Vrijwilliger worden" not in text  # menu item
+    assert "Kom je ook helpen als vrijwilliger" in text  # body text
+
+
+def test_fingerprint_is_stable():
+    assert fingerprint(main_text(HOME)) == fingerprint(main_text(HOME))
+    assert fingerprint(main_text(HOME)) != fingerprint(main_text(HOME_2027))
+
+
+def test_unchanged_page_skips_ai(tmp_path):
+    ai = FakeAI(UNKNOWN_RESULT)
+    assert run(tmp_path, HOME, ai) == "eerste meting"
+    assert run(tmp_path, HOME, ai, today="2026-10-17") == "ongewijzigd"
+    assert ai.calls == 1
+    assert state(tmp_path)["gecontroleerd_op"] == "2026-10-17"
+
+
+def test_simulated_announcement_creates_change_event(tmp_path):
+    ai = FakeAI(UNKNOWN_RESULT, ANNOUNCED_RESULT)
+    run(tmp_path, HOME, ai)
+    assert run(tmp_path, HOME_2027, ai, today="2026-10-17") == "gewijzigd"
+
+    changes = json.loads((tmp_path / "changes" / "2026-10-17-stuwwalloop.json").read_text(encoding="utf-8"))
+    assert len(changes) == 1
+    by_field = {c["veld"]: c for c in changes[0]["wijzigingen"]}
+    assert by_field["datum_loopje"]["oud"] == ""
+    assert by_field["datum_loopje"]["nieuw"] == "2027-05-29"
+    assert by_field["inschrijving_status"]["oud"] == "onbekend"
+    assert by_field["inschrijving_status"]["nieuw"] == "nog_niet_open"
+    assert by_field["inschrijving_opent_datum"]["nieuw"] == "2026-12-01"
+    assert by_field["inschrijving_opent_tijd"]["nieuw"] == "20:00"
+    assert by_field["inschrijving_opent_tijd"]["bron_url"] == "https://www.stuwwalloop.nl/"
+
+    assert state(tmp_path)["status"]["inschrijving_opent_datum"]["waarde"] == "2026-12-01"
+
+
+def test_low_confidence_opens_issue_and_publishes_nothing(tmp_path):
+    unsure = dict(ANNOUNCED_RESULT, inschrijving_opent_datum=field(
+        "2026-12-01", "laag", "De inschrijving opent op dinsdag 1 december 2026 om 20:00 uur."))
+    ai, issues = FakeAI(UNKNOWN_RESULT, unsure), FakeIssues()
+    run(tmp_path, HOME, ai, issues)
+    assert run(tmp_path, HOME_2027, ai, issues, today="2026-10-17") == "controleren"
+
+    assert len(issues.opened) == 1
+    title, body = issues.opened[0]
+    assert title == "Controleren: Stuwwalloop"
+    assert "(twijfel)" in body and "2026-12-01" in body
+    assert not (tmp_path / "changes").exists()
+    s = state(tmp_path)
+    assert s["status"]["inschrijving_opent_datum"]["waarde"] == ""  # old value kept
+    assert s["wacht_op_controle"] == "https://github.com/example/issues/1"
+
+    # Same page next day: no second AI call and no duplicate issue.
+    assert run(tmp_path, HOME_2027, ai, issues, today="2026-10-18") == "ongewijzigd"
+    assert len(issues.opened) == 1
+
+
+def test_quote_not_on_page_counts_as_low_confidence(tmp_path):
+    invented = dict(ANNOUNCED_RESULT, datum_loopje=field("2027-05-29", "hoog", "Het loopje is op 29 mei 2027"))
+    issues = FakeIssues()
+    run(tmp_path, HOME, FakeAI(UNKNOWN_RESULT), issues)
+    assert run(tmp_path, HOME_2027, FakeAI(invented), issues, today="2026-10-17") == "controleren"
+    assert "bronzin staat niet letterlijk op de pagina" in issues.opened[0][1]
+
+
+def test_costs_are_recorded_per_month(tmp_path):
+    ai = FakeAI(UNKNOWN_RESULT, ANNOUNCED_RESULT)
+    run(tmp_path, HOME, ai)
+    run(tmp_path, HOME_2027, ai, today="2026-10-17")
+    costs = json.loads((tmp_path / "costs" / "2026-10.json").read_text(encoding="utf-8"))
+    assert costs["ai_aanroepen"] == 2
+    assert costs["kosten_usd"] == pytest.approx(2 * (1000 * 1 + 100 * 5) / 1_000_000)

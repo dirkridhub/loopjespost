@@ -2,7 +2,8 @@
 
 Een gratis e-mail die hardlopers laat weten welke loopjes de komende week hun inschrijving openen.
 
-> Status: **prototype** (fase 0, opzet). Er draait nog niets automatisch.
+> Status: **prototype, fase 1** (de monitor). Werkt en is getest op voorbeeldpagina's.
+> Draait automatisch zodra de repository op GitHub staat en de API-sleutel erin zit.
 
 ## Wat doet het (prototype)
 
@@ -41,3 +42,22 @@ Een gratis e-mail die hardlopers laat weten welke loopjes de komende week hun in
 Sleutels en wachtwoorden staan **nooit** in de code. Ze staan in GitHub Secrets
 (voor de automatische runs) en lokaal in een `.env`-bestand dat niet in git komt.
 Zie [docs/accounts-en-sleutels.md](docs/accounts-en-sleutels.md).
+
+## De controle zelf draaien
+
+Automatisch: elke nacht via GitHub Actions ("Dagelijkse controle"). Met de knop
+**Run workflow** op het tabblad Actions start je hem direct.
+
+Wat je daarna ziet:
+- `data/state/<loopje>.json`: wat de monitor nu weet, met de zin uit de bron en de datum van controle.
+- `data/changes/`: een bestand per dag waarop iets echt veranderd is.
+- `data/costs/<maand>.json`: aantal AI-aanroepen en geschatte kosten.
+- Issues met het label **controleren**: twijfelgevallen voor jou.
+
+Op je eigen Mac (voor de nieuwsgierigen):
+
+```
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/pytest            # tests, zonder internet
+.venv/bin/python -m loopjespost.monitor   # echte controle, heeft ANTHROPIC_API_KEY nodig
+```

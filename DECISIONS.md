@@ -61,3 +61,56 @@ minder dan 1 euro per maand.
 GitHub Issue voor Dirk. Er wordt nooit een datum verzonnen.
 
 **Waarom:** Een verkeerde datum in de mail is erger dan geen datum.
+
+## 2026-10-16 — De monitor schrijft in data/, niet in events/
+
+**Keuze:** Wat de monitor vindt, komt in `data/state/<id>.json`. De bestanden in `events/` zijn
+van Dirk. Vult Dirk daar zelf een inschrijfdatum in, dan gaat die voor (wordt gebruikt vanaf de mail in fase 2).
+
+**Waarom:** Zo overschrijft de computer nooit een correctie van Dirk, en blijven de
+YAML-bestanden met hun uitleg leesbaar.
+
+## 2026-10-16 — Extra controle tegen verzonnen antwoorden
+
+**Keuze:** De AI moet bij elke waarde een zinnetje letterlijk uit de pagina citeren. Staat dat
+zinnetje niet echt op de pagina, of heeft de datum een raar formaat, dan telt het als lage
+zekerheid en komt er een issue.
+
+**Waarom:** Gratis te controleren en vangt het belangrijkste risico af: een AI die een datum verzint.
+
+## 2026-10-16 — Bij twijfel wordt het hele resultaat vastgehouden
+
+**Keuze:** Twijfelt de AI over één veld, dan wordt voor dat loopje niets bijgewerkt en komt er
+één issue. Dezelfde pagina leidt de volgende dag niet tot een tweede issue.
+
+**Waarom:** Simpel en veilig. Dirk zet de juiste waarde in het YAML-bestand en sluit het issue.
+
+## 2026-10-16 — Eerste controle is een nulmeting
+
+**Keuze:** De eerste keer dat een loopje wordt gecontroleerd, slaan we de status op zonder
+"wijziging" te melden.
+
+**Waarom:** Anders lijkt bij elk nieuw loopje alles in één keer "veranderd".
+
+## 2026-10-16 — Controle om 03:00 UTC
+
+**Keuze:** GitHub Actions draait om 03:00 UTC: 05:00 in de zomer, 04:00 in de winter.
+
+**Waarom:** Eén regel in plaats van twee, en het maakt voor de mail niet uit.
+
+## 2026-10-16 — Eén echte pagina als testmateriaal
+
+**Keuze:** In `tests/fixtures/` staat de homepage van de Stuwwalloop (opgehaald op 16-10-2026)
+en een nagemaakte versie met een verzonnen aankondiging voor 2027. Alleen als testmateriaal.
+
+**Waarom:** Zo testen we het uitlezen zonder internet. We bewaren zo weinig mogelijk pagina's
+van anderen; de overige twee opgehaalde pagina's zijn weer verwijderd.
+
+## 2026-10-16 — Model: Claude Haiku 4.5 via gestructureerde output
+
+**Keuze:** De AI moet antwoorden in een vast formaat (JSON-schema). Per veld: waarde, zekerheid
+en bronzin.
+
+**Waarom:** Geen los tekstantwoord dat we moeten ontleden. Of Haiku betrouwbaar genoeg is,
+testen we op echte pagina's zodra de API-sleutel er is. Zo niet, dan stappen we over op Sonnet
+(ongeveer 2x zo duur, nog steeds enkele euro's per maand).
