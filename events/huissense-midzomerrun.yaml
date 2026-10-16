@@ -1,0 +1,23 @@
+id: huissense-midzomerrun
+naam: "Huissense Midzomerrun"
+plaats: Huissen
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: []
+
+website: https://loopgroephuissen.nl/
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: false
+notities: "Organisatie: Loopgroep Huissen. Editie 2026 was in juni."

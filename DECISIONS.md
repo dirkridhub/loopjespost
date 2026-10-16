@@ -114,3 +114,19 @@ en bronzin.
 **Waarom:** Geen los tekstantwoord dat we moeten ontleden. Of Haiku betrouwbaar genoeg is,
 testen we op echte pagina's zodra de API-sleutel er is. Zo niet, dan stappen we over op Sonnet
 (ongeveer 2x zo duur, nog steeds enkele euro's per maand).
+
+## 2026-10-16 — Eerste 20 loopjes: rond Oosterbeek, binnen 25 km
+
+**Keuze:** 20 loopjes binnen 25 km (rechte lijn, PDOK) van postcode 6861WX. Gevonden via
+zoekmachines, maar elk loopje is gecontroleerd op de **eigen site van de organisator**; alleen die
+site staat in het bestand. Datums van het loopje staan nog niet in het `datum_loopje`-veld, maar in de
+notities: zo vult de monitor ze zelf in en kunnen we zijn antwoord vergelijken met wat wij zagen.
+
+**Waarom:** Geen gegevens overnemen van hardloopkalenders. En een ingevulde datum "wint" van de
+monitor, dus die laten we leeg tot er een correctie nodig is.
+
+Afgevallen kandidaten:
+- Groot Ginkelse Loop (Wekerom): het oude domein is nu een gokwebsite.
+- Nijmeegse Nieuwjaarsloop (Cifla): de pagina laadt zijn tekst pas in de browser, met een
+  gewoon verzoek zien we niets. Kan later met een headless browser, als dat nodig blijkt.
+- Pietenloop (Bemmel): geen eigen website gevonden.

@@ -1,0 +1,23 @@
+id: derde-kerstdagloop
+naam: "Derde Kerstdagloop"
+plaats: Arnhem
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: [7, 14, 21.1]
+
+website: https://derdekerstdagloop.nl/
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: false
+notities: "Eigen site op 16-10-2026: zondag 27 december 2026, max. 1750 deelnemers, geen na-inschrijving. Organisatie: AV Ciko'66."

@@ -1,0 +1,23 @@
+id: liemerse-landloop
+naam: "Liemerse Landloop"
+plaats: Zevenaar
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: []
+
+website: https://liemerselandloop.nl/
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: false
+notities: "Oud-Zevenaar. Eigen site op 16-10-2026: volgende editie zondag 23 mei 2027."

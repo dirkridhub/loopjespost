@@ -1,0 +1,23 @@
+id: veluwezoom-trail
+naam: "LOWA Veluwezoom Trail"
+plaats: Dieren
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: [7, 15, 24, 31, 62]
+
+website: https://cairnadventures.nl/trail/veluwezoom-trail/
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: true
+notities: "Start bij de Veluwse Poort. Eigen site op 16-10-2026: zondag 11 juli 2027; pagina meldt ook 'andere afstanden zitten VOL' (mogelijk nog over 2026)."

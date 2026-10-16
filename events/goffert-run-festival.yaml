@@ -1,0 +1,23 @@
+id: goffert-run-festival
+naam: "Goffert Run Festival"
+plaats: Nijmegen
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: [5]
+
+website: https://7h.nl/goffert-run-festival
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: false
+notities: "Overzicht van de stichting (7h.nl) op 16-10-2026: 17 april 2027. Pagina gaat nog over 2026."

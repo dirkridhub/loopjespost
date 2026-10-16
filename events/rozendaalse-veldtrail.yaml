@@ -1,0 +1,23 @@
+id: rozendaalse-veldtrail
+naam: "Rozendaalse Veldtrail"
+plaats: Rozendaal
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: [6, 12]
+
+website: https://www.bedriegertjeslopers.nl/rozendaalse-veldtrail
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: false
+notities: "Organisatie: Bedriegertjeslopers. Editie 2026 was woensdagavond 26 augustus. Inschrijven ook op de dag zelf."

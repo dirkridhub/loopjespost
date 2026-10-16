@@ -1,0 +1,23 @@
+id: drielse-kersenrun
+naam: "Drielse Kersenrun"
+plaats: Driel
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: [5, 10]
+
+website: https://kersenfeestdriel.nl/kersenrun/
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: false
+notities: "Onderdeel van Kersenfeest Driel. Editie 2026 was zondag 28 juni."

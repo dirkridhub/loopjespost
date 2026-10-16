@@ -1,0 +1,23 @@
+id: lingezegen-marathon
+naam: "Lingezegen Marathon"
+plaats: Elst
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: [10, 21.1, 42.2]
+
+website: https://lingezegenmarathon.nl/
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: true
+notities: "Eigen site op 16-10-2026: zondag 28 februari 2027, max. 2000 lopers. Loopafstanden uitverkocht, wachtlijst."

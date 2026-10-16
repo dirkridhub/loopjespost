@@ -1,0 +1,23 @@
+id: posbankloop
+naam: "Ehrmann Posbankloop"
+plaats: Velp
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: [6, 15]
+
+website: https://deposbankloop.nl/
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: true
+notities: "Editie 2026 was zondag 27 september, uitverkocht."

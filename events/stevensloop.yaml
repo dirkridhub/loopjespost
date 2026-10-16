@@ -1,0 +1,23 @@
+id: stevensloop
+naam: "Alfa Laval Stevensloop"
+plaats: Nijmegen
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: [5, 10, 21.1]
+
+website: https://alfalavalstevensloop.nl/
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: false
+notities: "Eigen site op 16-10-2026: 21 maart 2027."

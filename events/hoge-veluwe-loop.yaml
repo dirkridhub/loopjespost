@@ -1,0 +1,23 @@
+id: hoge-veluwe-loop
+naam: "Hoge Veluwe Loop"
+plaats: Otterlo
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: [5.5, 12.5, 20]
+
+website: https://hogeveluwe.nl/plan-je-bezoek/activiteiten/hoge-veluwe-loop
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: true
+notities: "In het Nationale Park De Hoge Veluwe (gemeente Ede). Editie 2026 was 4 oktober, afstanden waren vol."

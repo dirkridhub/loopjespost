@@ -1,0 +1,23 @@
+id: februariloop
+naam: "Februariloop"
+plaats: Bennekom
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: []
+
+website: https://www.cbfb.nl/februariloop-2022/
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: false
+notities: "Start bij Kasteel Hoekelum. Pagina heet 'Februariloop 2027', datum niet gezien op eigen site."

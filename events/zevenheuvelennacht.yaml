@@ -1,0 +1,23 @@
+id: zevenheuvelennacht
+naam: "Garmin Zevenheuvelennacht"
+plaats: Nijmegen
+provincie: Gelderland
+
+datum_loopje:                  # filled in by the monitor; see notities for what the site said
+afstanden_km: [7]
+
+website: https://zevenheuvelenloop.nl/zevenheuvelennacht
+inschrijfpagina:
+
+inschrijving:
+  status: onbekend
+  opent_datum:
+  opent_tijd:
+
+bron:
+  url:
+  zin:
+  gecontroleerd_op:
+
+verkoopt_vaak_uit: true
+notities: "Eigen site op 16-10-2026: 14 november 2026, uitverkocht (resale)."
