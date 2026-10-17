@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-17",
+  "hash": "a9a47f3a63c2bfe4dd9006c058c81f07733df945c41655962f0659d052966f53",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://www.cbfb.nl/februariloop-2022/",
+      "bron_zin": "Februariloop 2027",
+      "waarde": "2027-02-00",
+      "zekerheid": "middel"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "onbekend",
+      "zekerheid": "laag"
+    }
+  }
+}

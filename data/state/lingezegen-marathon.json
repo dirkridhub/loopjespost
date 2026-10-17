@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-17",
+  "hash": "80548043460ab9914cc0d97f546bc9bad10b1a072593a64e143c4e7efa35031e",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://lingezegenmarathon.nl/",
+      "bron_zin": "Zondag 28 februari 2027",
+      "waarde": "2027-02-28",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "https://lingezegenmarathon.nl/",
+      "bron_zin": "Hele, halve en 10 km zijn uitverkocht. Alleen de wandeltocht is nog open",
+      "waarde": "vol",
+      "zekerheid": "hoog"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-17",
+  "hash": "ea84ebad1b1633e5e3dcadba394ba9ae32bd45e066b8c11c24f1d9e788e80aa9",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://liemerselandloop.nl/",
+      "bron_zin": "Op 23 mei 2027 zien we elkaar weer.",
+      "waarde": "2027-05-23",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "onbekend",
+      "zekerheid": "laag"
+    }
+  }
+}

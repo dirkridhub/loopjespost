@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-17",
+  "hash": "62291c3eb87f5bf5b8f8279af6a3346ffa0e829aaa58565da6db2489610372f8",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://7h.nl/zevenheuvelen-wintertrail",
+      "bron_zin": "Op zaterdag 12 en zondag 13 december 2026 vindt de vierde editie van de Zevenheuvelen Wintertrail plaats.",
+      "waarde": "2026-12-12",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "https://7h.nl/zevenheuvelen-wintertrail",
+      "bron_zin": "De inschrijving voor de Zevenheuvelen Wintertrail opent maandag 14 september 2026 om 12:00 uur.",
+      "waarde": "2026-09-14",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "https://7h.nl/zevenheuvelen-wintertrail",
+      "bron_zin": "De inschrijving voor de Zevenheuvelen Wintertrail opent maandag 14 september 2026 om 12:00 uur.",
+      "waarde": "12:00",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_status": {
+      "bron_url": "https://7h.nl/zevenheuvelen-wintertrail",
+      "bron_zin": "De inschrijving voor de Zevenheuvelen Wintertrail opent maandag 14 september 2026 om 12:00 uur.",
+      "waarde": "open",
+      "zekerheid": "hoog"
+    }
+  }
+}

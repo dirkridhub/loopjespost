@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-17",
+  "hash": "3793c43623736f0d6a1557420103f4edd75f90f3fd9dc5d8940892d5f64e5576",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://safaritrail.nl/",
+      "bron_zin": "Zondag 24 januari 2027, nog … Kies je trail",
+      "waarde": "2027-01-24",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "https://safaritrail.nl/",
+      "bron_zin": "De inschrijving voor 24 januari 2027 is open",
+      "waarde": "open",
+      "zekerheid": "hoog"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-17",
+  "hash": "3f47338d7b3167bd163015758db4c583975b9085be6025ecfa3d941269f6daa4",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://www.freedomrunwageningen.nl/",
+      "bron_zin": "23 mei 2027",
+      "waarde": "2027-05-23",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "https://www.freedomrunwageningen.nl/",
+      "bron_zin": "Schrijf je in",
+      "waarde": "open",
+      "zekerheid": "middel"
+    }
+  }
+}

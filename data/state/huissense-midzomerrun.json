@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-17",
+  "hash": "f9a9f6301e1de3c9c8d77d9d12d7a15c5c086f20a126558f3a65aa55704984ed",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "onbekend",
+      "zekerheid": "laag"
+    }
+  }
+}

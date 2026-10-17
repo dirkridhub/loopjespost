@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-17",
+  "hash": "ea9191473372bb66403e07199876c83f8d823412b88b50f8fd84836523a36200",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://zevenheuvelenloop.nl/zevenheuvelennacht",
+      "bron_zin": "De start van de Garmin Zevenheuvelennacht is op zaterdag 14 november om 19:00 uur",
+      "waarde": "2026-11-14",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "https://zevenheuvelenloop.nl/zevenheuvelennacht",
+      "bron_zin": "De inschrijving voor de Garmin Zevenheuvelennacht is uitverkocht.",
+      "waarde": "vol",
+      "zekerheid": "hoog"
+    }
+  }
+}
