@@ -51,11 +51,14 @@ Return, for the NEXT edition of the race (an edition on or after today's date):
 Rules:
 - Never guess. If the text does not state a value for the next edition, use "" (or "onbekend"
   for the status) with zekerheid "laag" and bron_zin "".
+- Never construct a date. A date counts only if its day and month are written in the text.
+  "Next year", "in the spring" or a weekday pattern is not a date: use "".
 - Dates of past editions are not the next edition. A past date means the next date is unknown.
 - bron_zin must be copied word for word from the text: one short sentence or fragment (max 25 words)
-  that proves the value. Do not paraphrase.
-- zekerheid: "hoog" if the text states it explicitly for the next edition, "middel" if it needs
-  a small inference (e.g. year implied), "laag" if unclear or not stated."""
+  that contains the value (for dates: the day and month). Do not paraphrase, merge or reorder sentences.
+- zekerheid: "hoog" if the text states it explicitly for the next edition, "middel" if only the
+  year is implied (e.g. "zondag 27 december" on a page about the coming edition), "laag" if
+  unclear or not stated."""
 
 
 def read_status(text: str, race_name: str, today: str, client=None) -> tuple[dict, dict]:

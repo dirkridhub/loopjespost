@@ -150,3 +150,49 @@ def test_costs_are_recorded_per_month(tmp_path):
     costs = json.loads((tmp_path / "costs" / "2026-10.json").read_text(encoding="utf-8"))
     assert costs["ai_aanroepen"] == 2
     assert costs["kosten_usd"] == pytest.approx(2 * (1000 * 1 + 100 * 5) / 1_000_000)
+
+
+# Cases seen in the first real runs (October 2026).
+
+from loopjespost.monitor import review  # noqa: E402
+
+PAGE = {"https://example.nl/": (
+    "Op zondag 27 december 2026 organiseert atletiekvereniging Ciko’66 de loop. "
+    "We hopen jullie volgend jaar aan de start te zien. Februariloop 2027. "
+    "De Ehrmann Posbankloop ZONDAG 27 SEPTEMBER 2026. 6K en 15K uitverkocht."
+)}
+
+
+def reviewed(**fields):
+    base = {name: field("", "laag") for name in UNKNOWN_RESULT}
+    base["inschrijving_status"] = field("onbekend", "laag")
+    base.update(fields)
+    return review(base, PAGE, today="2026-10-18")
+
+
+def test_typographic_apostrophe_still_matches():
+    out = reviewed(datum_loopje=field("2026-12-27", "hoog",
+                                      "Op zondag 27 december 2026 organiseert atletiekvereniging Ciko'66 de loop."))
+    assert out["datum_loopje"]["zekerheid"] == "hoog"
+
+
+def test_date_built_from_vague_text_is_low():
+    out = reviewed(datum_loopje=field("2027-06-27", "middel", "We hopen jullie volgend jaar aan de start te zien."))
+    assert out["datum_loopje"]["zekerheid"] == "laag"
+    assert out["datum_loopje"]["reden"] == "datum staat niet in de bronzin"
+
+
+def test_impossible_date_is_low():
+    out = reviewed(datum_loopje=field("2027-02-00", "middel", "Februariloop 2027"))
+    assert out["datum_loopje"]["reden"] == "geen geldige datum"
+
+
+def test_past_edition_means_next_edition_unknown():
+    out = reviewed(
+        datum_loopje=field("2026-09-27", "hoog", "De Ehrmann Posbankloop ZONDAG 27 SEPTEMBER 2026"),
+        inschrijving_status=field("vol", "hoog", "6K en 15K uitverkocht."),
+    )
+    assert out["datum_loopje"]["waarde"] == ""
+    assert out["inschrijving_status"]["waarde"] == "onbekend"
+    assert all(f["zekerheid"] == "hoog" for f in out.values())
+    assert out["datum_loopje"]["reden"] == "vorige editie (2026-09-27)"

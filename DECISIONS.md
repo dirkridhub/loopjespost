@@ -130,3 +130,23 @@ Afgevallen kandidaten:
 - Nijmeegse Nieuwjaarsloop (Cifla): de pagina laadt zijn tekst pas in de browser, met een
   gewoon verzoek zien we niets. Kan later met een headless browser, als dat nodig blijkt.
 - Pietenloop (Bemmel): geen eigen website gevonden.
+
+## 2026-10-18 — Strengere controle na de eerste echte runs
+
+De eerste twee nachten (20 loopjes, 23 AI-aanroepen, $ 0,085) lieten zien waar het misging:
+- De AI "rekende" een datum uit ("volgend jaar" werd 27 juni 2027) of gaf een onmogelijke datum (2027-02-00).
+- Een vorige editie (Posbankloop 27-09-2026) werd als volgende editie opgeslagen.
+- Een terechte bronzin werd afgekeurd door een krul-apostrof (Ciko’66 tegenover Ciko'66).
+
+**Keuze:**
+- Een datum telt alleen als dag én maand letterlijk in de bronzin staan, en de datum echt bestaat.
+  Hetzelfde geldt voor de tijd.
+- Ligt de gevonden datum van het loopje in het verleden, dan gaat het om de vorige editie: datum,
+  status en opening van de volgende editie zijn dan "onbekend".
+- Bij het vergelijken van de bronzin tellen krullende en rechte aanhalingstekens als gelijk.
+- Een versienummer in de vingerafdruk: verandert de controle, dan wordt elk loopje één keer opnieuw gelezen.
+- De nachtelijke run staat op 03:17 UTC in plaats van 03:00. GitHub startte de runs 4,5 uur te laat,
+  en vertraagt het meest op het hele uur.
+
+**Waarom:** Dit zijn gratis controles in code die precies de gevonden fouten afvangen,
+zonder dat het een duurder model nodig heeft.

@@ -2,8 +2,9 @@ name: Dagelijkse controle
 
 on:
   schedule:
-    # 03:00 UTC = 05:00 in summer, 04:00 in winter (Dutch time). Scheduled runs may start late.
-    - cron: "0 3 * * *"
+    # 03:17 UTC = 05:17 in summer, 04:17 in winter (Dutch time). Off the full hour, because
+    # GitHub delays runs most at busy moments; even so they can start hours late.
+    - cron: "17 3 * * *"
   workflow_dispatch: {}
 
 permissions:
