@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-18",
+  "hash": "317815638bdea5d7329c15f5b3b22850421dd551b256817edb2d605d5e9d4ce0",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://airbornefreedomrun.nl/",
+      "bron_zin": "12 september 2027",
+      "waarde": "2027-09-12",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "onbekend",
+      "zekerheid": "laag"
+    }
+  }
+}

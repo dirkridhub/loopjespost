@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-18",
+  "hash": "1dc850bd936bd664aae87db096eed6c44a5127a58fdd255317a775d3a5dbe26d",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://www.bedriegertjeslopers.nl/rozendaalse-veldtrail",
+      "bron_zin": "Op woensdagavond 26 augustus 2026 zal voor de 41e keer de Rozendaalse Veldtrail plaatsvinden.",
+      "waarde": "2026-08-26",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "https://www.bedriegertjeslopers.nl/rozendaalse-veldtrail",
+      "bron_zin": "Inschrijven kan ook op de dag zelf vanaf 18.00 bij de Start.",
+      "waarde": "open",
+      "zekerheid": "middel"
+    }
+  }
+}

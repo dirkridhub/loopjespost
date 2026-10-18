@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-18",
+  "hash": "d3c92d41730577bae21a19c7feb8e71a480fd1e291337ed62aec542a5a79112e",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://alfalavalstevensloop.nl/",
+      "bron_zin": "Alfa Laval Stevensloop 21 maart 2027",
+      "waarde": "2027-03-21",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "onbekend",
+      "zekerheid": "laag"
+    }
+  }
+}

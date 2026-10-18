@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-18",
+  "hash": "4d48cb436fa30cff8129ff520187c2140f45feb2ed6651b5f085b8405ae9ab07",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://alfalavalstevensloop.nl/stevens-stadscross",
+      "bron_zin": "De Stevens Stadscross start op zaterdag 20 maart 2027 om 21.00 uur.",
+      "waarde": "2027-03-20",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "https://alfalavalstevensloop.nl/stevens-stadscross",
+      "bron_zin": "De inschrijving voor de Stevens Stadscross opent 1 oktober.",
+      "waarde": "2026-10-01",
+      "zekerheid": "middel"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "onbekend",
+      "zekerheid": "laag"
+    }
+  }
+}

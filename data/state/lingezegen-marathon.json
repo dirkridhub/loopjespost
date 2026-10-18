@@ -1,0 +1,30 @@
+{
+  "gecontroleerd_op": "2026-10-18",
+  "hash": "37bb7e1997aa7b975a713decb62ca519bd35c0613187c0cb59f348f6e7638750",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://lingezegenmarathon.nl/",
+      "bron_zin": "Zondag 28 februari 2027",
+      "waarde": "2027-02-28",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "https://lingezegenmarathon.nl/",
+      "bron_zin": "Loopafstanden uitverkocht",
+      "waarde": "vol",
+      "zekerheid": "hoog"
+    }
+  }
+}
