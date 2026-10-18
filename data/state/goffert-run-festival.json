@@ -1,6 +1,6 @@
 {
-  "gecontroleerd_op": "2026-10-17",
-  "hash": "9bb4f450084740f1781555d97816c93d799ab8ff49e730cfc85e213112f2580b",
+  "gecontroleerd_op": "2026-10-18",
+  "hash": "803a93285a68c68fc23d99fa6adffa7d1d4325f90be6de49f77f779d89c1a6dd",
   "status": {
     "datum_loopje": {
       "bron_url": "",
@@ -26,5 +26,6 @@
       "waarde": "onbekend",
       "zekerheid": "laag"
     }
-  }
+  },
+  "wacht_op_controle": "https://github.com/dirkridhub/loopjespost/issues/4"
 }

@@ -1,6 +1,6 @@
 {
-  "gecontroleerd_op": "2026-10-17",
-  "hash": "80548043460ab9914cc0d97f546bc9bad10b1a072593a64e143c4e7efa35031e",
+  "gecontroleerd_op": "2026-10-18",
+  "hash": "37bb7e1997aa7b975a713decb62ca519bd35c0613187c0cb59f348f6e7638750",
   "status": {
     "datum_loopje": {
       "bron_url": "https://lingezegenmarathon.nl/",
@@ -22,7 +22,7 @@
     },
     "inschrijving_status": {
       "bron_url": "https://lingezegenmarathon.nl/",
-      "bron_zin": "Hele, halve en 10 km zijn uitverkocht. Alleen de wandeltocht is nog open",
+      "bron_zin": "Loopafstanden uitverkocht",
       "waarde": "vol",
       "zekerheid": "hoog"
     }
