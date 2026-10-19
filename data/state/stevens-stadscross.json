@@ -1,6 +1,6 @@
 {
-  "gecontroleerd_op": "2026-10-18",
-  "hash": "4d48cb436fa30cff8129ff520187c2140f45feb2ed6651b5f085b8405ae9ab07",
+  "gecontroleerd_op": "2026-10-19",
+  "hash": "d742ebd4a97070f43b09fee87772922c7a7c82966576ff2450eb6227a2609345",
   "status": {
     "datum_loopje": {
       "bron_url": "https://alfalavalstevensloop.nl/stevens-stadscross",
@@ -12,7 +12,7 @@
       "bron_url": "https://alfalavalstevensloop.nl/stevens-stadscross",
       "bron_zin": "De inschrijving voor de Stevens Stadscross opent 1 oktober.",
       "waarde": "2026-10-01",
-      "zekerheid": "middel"
+      "zekerheid": "hoog"
     },
     "inschrijving_opent_tijd": {
       "bron_url": "",

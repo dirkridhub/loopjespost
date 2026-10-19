@@ -1,5 +1,30 @@
 {
-  "gecontroleerd_op": "2026-10-18",
-  "hash": "2cba95d9af62081c3b77044257f27329083515c4c925a490b5de83cd7def0dea",
-  "wacht_op_controle": "https://github.com/dirkridhub/loopjespost/issues/2"
+  "gecontroleerd_op": "2026-10-19",
+  "hash": "64b310fea259e2a4fdeafce040afc33ff50f15a466cb2a1a8e1a3437c5703ea5",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "https://hogeveluwe.nl/plan-je-bezoek/activiteiten/hoge-veluwe-loop",
+      "bron_zin": "Alle afstanden voor volwassenen zijn volgeboekt.",
+      "waarde": "vol",
+      "zekerheid": "hoog"
+    }
+  }
 }

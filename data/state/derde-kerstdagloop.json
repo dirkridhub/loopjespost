@@ -1,5 +1,30 @@
 {
-  "gecontroleerd_op": "2026-10-18",
-  "hash": "aa3b02f16d745befc81b9195244fe436d7c08e005aa4f26954779bbf1c90f81e",
-  "wacht_op_controle": "https://github.com/dirkridhub/loopjespost/issues/1"
+  "gecontroleerd_op": "2026-10-19",
+  "hash": "c5497d3093c3ab42f5b73dd69653f20577457e0e5e5630e33c0a4ab48f918089",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://derdekerstdagloop.nl/",
+      "bron_zin": "Op zondag 27 december 2026 organiseert atletiekvereniging Ciko'66 Physique Derde Kerstdagloop",
+      "waarde": "2026-12-27",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "https://derdekerstdagloop.nl/",
+      "bron_zin": "Het inschrijfformulier is geopend.",
+      "waarde": "open",
+      "zekerheid": "hoog"
+    }
+  }
 }

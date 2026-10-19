@@ -1,0 +1,23 @@
+[
+  {
+    "datum": "2026-10-19",
+    "loopje": "posbankloop",
+    "naam": "Ehrmann Posbankloop",
+    "wijzigingen": [
+      {
+        "bron_url": "https://deposbankloop.nl/",
+        "bron_zin": "De Ehrmann Posbankloop ZONDAG 27 SEPTEMBER 2026",
+        "nieuw": "",
+        "oud": "2026-09-27",
+        "veld": "datum_loopje"
+      },
+      {
+        "bron_url": "",
+        "bron_zin": "",
+        "nieuw": "onbekend",
+        "oud": "vol",
+        "veld": "inschrijving_status"
+      }
+    ]
+  }
+]

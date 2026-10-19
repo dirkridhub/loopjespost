@@ -1,29 +1,33 @@
 {
-  "gecontroleerd_op": "2026-10-18",
-  "hash": "629c5b8a8b079a679ef084fc15e8bc03c4ea7f22578b3a0134d9dbf7405627c2",
+  "gecontroleerd_op": "2026-10-19",
+  "hash": "95595ef545eb2f5c8dbc33b7bbcc7314055358509cf94a6bc817e954c92d2e35",
   "status": {
     "datum_loopje": {
       "bron_url": "https://deposbankloop.nl/",
       "bron_zin": "De Ehrmann Posbankloop ZONDAG 27 SEPTEMBER 2026",
-      "waarde": "2026-09-27",
+      "reden": "vorige editie (2026-09-27)",
+      "waarde": "",
       "zekerheid": "hoog"
     },
     "inschrijving_opent_datum": {
       "bron_url": "",
       "bron_zin": "",
+      "reden": "vorige editie (2026-09-27)",
       "waarde": "",
-      "zekerheid": "laag"
+      "zekerheid": "hoog"
     },
     "inschrijving_opent_tijd": {
       "bron_url": "",
       "bron_zin": "",
+      "reden": "vorige editie (2026-09-27)",
       "waarde": "",
-      "zekerheid": "laag"
+      "zekerheid": "hoog"
     },
     "inschrijving_status": {
-      "bron_url": "https://deposbankloop.nl/",
-      "bron_zin": "6K, 15K, wandeltocht en diverse kidsruns uitverkocht.",
-      "waarde": "vol",
+      "bron_url": "",
+      "bron_zin": "",
+      "reden": "vorige editie (2026-09-27)",
+      "waarde": "onbekend",
       "zekerheid": "hoog"
     }
   }

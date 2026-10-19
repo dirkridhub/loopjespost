@@ -1,5 +1,30 @@
 {
-  "gecontroleerd_op": "2026-10-18",
-  "hash": "58f5bf29ecd4aae37c88c714acf8e8b9bc21e94f67b282d90f0495a955f6f9a4",
-  "wacht_op_controle": "https://github.com/dirkridhub/loopjespost/issues/3"
+  "gecontroleerd_op": "2026-10-19",
+  "hash": "87d0bcdae455f63a5aa493f90db1f6db1d241a864d28e283117acc17848319b1",
+  "status": {
+    "datum_loopje": {
+      "bron_url": "https://cairnadventures.nl/trail/veluwezoom-trail/",
+      "bron_zin": "Zondag 11 juli 2027",
+      "waarde": "2027-07-11",
+      "zekerheid": "hoog"
+    },
+    "inschrijving_opent_datum": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_opent_tijd": {
+      "bron_url": "",
+      "bron_zin": "",
+      "waarde": "",
+      "zekerheid": "laag"
+    },
+    "inschrijving_status": {
+      "bron_url": "https://cairnadventures.nl/trail/veluwezoom-trail/",
+      "bron_zin": "Inschrijven alleen nog mogelijk voor de KIDSTRAIL! Andere afstanden zitten VOL!",
+      "waarde": "vol",
+      "zekerheid": "hoog"
+    }
+  }
 }
