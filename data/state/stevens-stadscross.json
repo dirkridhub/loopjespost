@@ -1,6 +1,6 @@
 {
-  "gecontroleerd_op": "2026-10-20",
-  "hash": "7cc5bdbc9c32e6ec372e5171de2eafd30be3ef5d1cae4a1efd70ae154d2b76bc",
+  "gecontroleerd_op": "2026-10-21",
+  "hash": "d742ebd4a97070f43b09fee87772922c7a7c82966576ff2450eb6227a2609345",
   "status": {
     "datum_loopje": {
       "bron_url": "https://alfalavalstevensloop.nl/stevens-stadscross",
@@ -26,5 +26,6 @@
       "waarde": "onbekend",
       "zekerheid": "laag"
     }
-  }
+  },
+  "wacht_op_controle": "https://github.com/dirkridhub/loopjespost/issues/10"
 }
