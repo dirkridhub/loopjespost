@@ -1,34 +1,30 @@
 {
-  "gecontroleerd_op": "2026-10-21",
-  "hash": "457712f3921b0da77062ad3c76db01b724fba8ab18ab703b0593be57ca7076aa",
+  "gecontroleerd_op": "2026-10-22",
+  "hash": "e6dacc85a5edb9f34d07466d82005a6bab4728c42d3fc6caa76f404c2568c7b2",
   "status": {
     "datum_loopje": {
-      "bron_url": "https://7h.nl/goffert-run-festival",
-      "bron_zin": "Op zaterdag 18 april staat de vierde Seven Hills Record Run op het programma.",
-      "reden": "vorige editie (2026-04-18)",
+      "bron_url": "",
+      "bron_zin": "",
       "waarde": "",
-      "zekerheid": "hoog"
+      "zekerheid": "laag"
     },
     "inschrijving_opent_datum": {
       "bron_url": "",
       "bron_zin": "",
-      "reden": "vorige editie (2026-04-18)",
       "waarde": "",
-      "zekerheid": "hoog"
+      "zekerheid": "laag"
     },
     "inschrijving_opent_tijd": {
       "bron_url": "",
       "bron_zin": "",
-      "reden": "vorige editie (2026-04-18)",
       "waarde": "",
-      "zekerheid": "hoog"
+      "zekerheid": "laag"
     },
     "inschrijving_status": {
       "bron_url": "",
       "bron_zin": "",
-      "reden": "vorige editie (2026-04-18)",
       "waarde": "onbekend",
-      "zekerheid": "hoog"
+      "zekerheid": "laag"
     }
   }
 }
