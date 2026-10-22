@@ -36,5 +36,14 @@ def main_text(html: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+COUNTDOWN = re.compile(r"\b\d+\s*(dagen|dag|uren|minuten|min|seconden|sec)\b", re.I)
+
+
 def fingerprint(text: str) -> str:
-    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+    """Fingerprint that ignores countdown clocks and the order of blocks on the page.
+
+    Some sites show "134 dagen 17 uren" or shuffle their sections on every visit; that must not
+    count as a change. The AI still reads the full, ordered text.
+    """
+    words = sorted(COUNTDOWN.sub(" ", text).lower().split())
+    return hashlib.sha256(" ".join(words).encode("utf-8")).hexdigest()

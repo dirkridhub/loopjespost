@@ -150,3 +150,27 @@ De eerste twee nachten (20 loopjes, 23 AI-aanroepen, $ 0,085) lieten zien waar h
 
 **Waarom:** Dit zijn gratis controles in code die precies de gevonden fouten afvangen,
 zonder dat het een duurder model nodig heeft.
+
+## 2026-10-22 — Minder ruis: vingerafdruk, één issue per loopje, niets weggooien
+
+Na een week (19-22 oktober): 55 AI-aanroepen ($ 0,21) en 10 issues, waarvan veel dubbel. Oorzaken:
+- De Lingezegen-site heeft een aftelklok, en de sites van de Stichting Zevenheuvelenloop zetten hun
+  blokken elke keer in een andere volgorde. De pagina leek dus elke dag "veranderd".
+- Elke nieuwe twijfel gaf een nieuw issue (Goffert Run Festival: drie keer).
+- Als de AI een waarde de ene keer wel en de volgende keer niet vond, werd dat een issue.
+
+**Keuze:**
+- De vingerafdruk negeert aftelklokken ("134 dagen 17 uren") en de volgorde van de woorden.
+  De AI leest wel de volledige tekst, in de goede volgorde.
+- Per loopje staat er hooguit één issue open. Wordt de pagina later wel duidelijk, dan sluit de
+  monitor het issue zelf (met een reactie).
+- Vindt de AI een eerder gevonden waarde nu niet, dan houden we de oude waarde. Een waarde verdwijnt
+  alleen als de pagina duidelijk iets anders zegt (zoals een editie die voorbij is).
+- "Open" of "vol" publiceren we alleen als we ook weten voor welke datum. Anders: onbekend.
+
+**Waarom:** Dirk moet hooguit een uur per week kwijt zijn aan checks. Issues zijn alleen voor
+echte twijfel over een nieuwe datum of status.
+
+**Nog open:** GitHub start de nachtelijke run elke dag ongeveer 5 uur te laat (rond 10:30 in plaats
+van 05:17). Voor een wekelijkse mail maakt dat niet uit. Voor het "vaker controleren vlak voor een
+opening" (fase 4) wel; daar kiezen we later een oplossing voor.

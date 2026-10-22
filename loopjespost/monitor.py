@@ -16,11 +16,11 @@ from . import ai
 from .events import load_events
 from .extract import fingerprint, main_text
 from .fetch import Fetcher
-from .issues import create_issue
+from .issues import create_issue, resolve_issues
 
 ROOT = Path(__file__).resolve().parent.parent
 # Bump when the reading rules change: every race is then read again once.
-CHECK_VERSION = 2
+CHECK_VERSION = 3
 UNKNOWN = ("", "onbekend")
 DATE_FIELDS = ("datum_loopje", "inschrijving_opent_datum")
 MONTHS = ["januari", "februari", "maart", "april", "mei", "juni", "juli",
@@ -116,31 +116,53 @@ def review(fields: dict, pages: dict[str, str], today: str) -> dict:
                 f["zekerheid"], f["reden"] = "laag", reason
         checked[name] = f
 
-    # A well-sourced race date in the past belongs to the previous edition:
-    # the next edition (and its registration) is then simply unknown.
-    race = checked["datum_loopje"]
-    race_day = _parse_date(race["waarde"])
-    if race_day and race_day.isoformat() < today and race.get("reden") is None:
-        reason = f"vorige editie ({race_day.isoformat()})"
-        for name in ai.FIELDS:
-            checked[name] = {
-                "waarde": "onbekend" if name == "inschrijving_status" else "",
-                "zekerheid": "hoog",
-                "bron_zin": race["bron_zin"] if name == "datum_loopje" else "",
-                "bron_url": race["bron_url"] if name == "datum_loopje" else "",
-                "reden": reason,
-            }
     return checked
 
 
-def uncertain_fields(fields: dict, previous: dict | None) -> list[str]:
-    """Low confidence matters when it would set a value, or wipe a value we had."""
-    out = []
+def merge(fields: dict, previous: dict | None) -> dict:
+    """Keep what we knew when the AI merely did not find a value this time.
+
+    The AI sometimes misses a value it found before. A value only disappears when the
+    page clearly says something else (see finalize for past editions).
+    """
+    if not previous:
+        return fields
+    merged = {}
     for name, f in fields.items():
-        had_value = previous and previous[name]["waarde"] not in UNKNOWN
-        if f["zekerheid"] == "laag" and (f["waarde"] not in UNKNOWN or had_value):
-            out.append(name)
-    return out
+        old = previous.get(name)
+        missing = f["waarde"] in UNKNOWN and f["zekerheid"] != "hoog"
+        merged[name] = old if (missing and old and old["waarde"] not in UNKNOWN) else f
+    return merged
+
+
+def uncertain_fields(fields: dict) -> list[str]:
+    """Fields where the AI claims a value but we cannot trust it."""
+    return [name for name, f in fields.items() if f["zekerheid"] == "laag" and f["waarde"] not in UNKNOWN]
+
+
+def _unknown(name: str, reason: str, keep: dict | None = None) -> dict:
+    return {
+        "waarde": "onbekend" if name == "inschrijving_status" else "",
+        "zekerheid": "hoog",
+        "bron_zin": keep["bron_zin"] if keep else "",
+        "bron_url": keep["bron_url"] if keep else "",
+        "reden": reason,
+    }
+
+
+def finalize(fields: dict, today: str) -> dict:
+    """Rules that hold for whatever we are about to publish."""
+    race = fields["datum_loopje"]
+    race_day = _parse_date(race["waarde"])
+    # A race date in the past belongs to the previous edition: the next one is unknown.
+    if race_day and race_day.isoformat() < today:
+        reason = f"vorige editie ({race_day.isoformat()})"
+        return {name: _unknown(name, reason, race if name == "datum_loopje" else None) for name in ai.FIELDS}
+    # "Open" or "vol" means nothing to a reader without knowing which edition it is about.
+    status = fields["inschrijving_status"]
+    if not race_day and status["waarde"] not in UNKNOWN:
+        fields = dict(fields, inschrijving_status=_unknown("inschrijving_status", "status zonder datum van het loopje"))
+    return fields
 
 
 def _issue_body(event: dict, fields: dict, uncertain: list[str], previous: dict | None) -> str:
@@ -199,6 +221,7 @@ def check_event(
     fetch: Callable[[str], str],
     read: Callable[[str, str, str], tuple[dict, dict]],
     open_issue: Callable[[str, str], str],
+    resolve_issues: Callable[[str, str], int] = lambda title, comment: 0,
     data_dir: Path,
     today: str,
 ) -> str:
@@ -219,21 +242,21 @@ def check_event(
 
     fields, usage = read(combined, event["naam"], today)
     _record_cost(data_dir, today, usage)
-    fields = review(fields, pages, today)
+    found = review(fields, pages, today)
     previous = state.get("status")
     state["hash"] = page_hash
+    title = f"Controleren: {event['naam']}"
 
-    uncertain = uncertain_fields(fields, previous)
+    uncertain = uncertain_fields(found)
     if uncertain:
-        url = open_issue(
-            f"Controleren: {event['naam']}",
-            _issue_body(event, fields, uncertain, previous),
-        )
-        state["wacht_op_controle"] = url
+        if not state.get("wacht_op_controle"):  # one open issue per race is enough
+            state["wacht_op_controle"] = open_issue(title, _issue_body(event, found, uncertain, previous))
         _write_json(state_path, state)
         return "controleren"
 
-    state.pop("wacht_op_controle", None)
+    fields = finalize(merge(found, previous), today)
+    if state.pop("wacht_op_controle", None):
+        resolve_issues(title, f"Opgelost bij de controle van {today}: de pagina is nu duidelijk genoeg.")
     state["status"] = fields
     _write_json(state_path, state)
     if previous is None:
@@ -254,7 +277,7 @@ def run(root: Path = ROOT) -> int:
     for event in events:
         try:
             outcome = check_event(
-                event, fetch=fetcher.get, read=read, open_issue=create_issue,
+                event, fetch=fetcher.get, read=read, open_issue=create_issue, resolve_issues=resolve_issues,
                 data_dir=data_dir, today=today,
             )
         except Exception as e:  # one broken site must not stop the run

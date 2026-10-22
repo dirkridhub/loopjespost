@@ -54,6 +54,8 @@ Rules:
 - Never construct a date. A date counts only if its day and month are written in the text.
   "Next year", "in the spring" or a weekday pattern is not a date: use "".
 - Dates of past editions are not the next edition. A past date means the next date is unknown.
+- The status is about the next edition too. "Vol" or "open" on a page about a past edition
+  means the status is "onbekend".
 - bron_zin must be copied word for word from the text: one short sentence or fragment (max 25 words)
   that contains the value (for dates: the day and month). Do not paraphrase, merge or reorder sentences.
 - zekerheid: "hoog" if the text states it explicitly for the next edition, "middel" if only the

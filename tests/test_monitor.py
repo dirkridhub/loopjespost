@@ -154,7 +154,7 @@ def test_costs_are_recorded_per_month(tmp_path):
 
 # Cases seen in the first real runs (October 2026).
 
-from loopjespost.monitor import review  # noqa: E402
+from loopjespost.monitor import finalize, merge, review  # noqa: E402
 
 PAGE = {"https://example.nl/": (
     "Op zondag 27 december 2026 organiseert atletiekvereniging Ciko’66 de loop. "
@@ -188,11 +188,56 @@ def test_impossible_date_is_low():
 
 
 def test_past_edition_means_next_edition_unknown():
-    out = reviewed(
+    out = finalize(reviewed(
         datum_loopje=field("2026-09-27", "hoog", "De Ehrmann Posbankloop ZONDAG 27 SEPTEMBER 2026"),
         inschrijving_status=field("vol", "hoog", "6K en 15K uitverkocht."),
-    )
+    ), today="2026-10-18")
     assert out["datum_loopje"]["waarde"] == ""
     assert out["inschrijving_status"]["waarde"] == "onbekend"
     assert all(f["zekerheid"] == "hoog" for f in out.values())
     assert out["datum_loopje"]["reden"] == "vorige editie (2026-09-27)"
+
+
+def test_status_without_race_date_is_not_published():
+    out = finalize(reviewed(inschrijving_status=field("vol", "hoog", "6K en 15K uitverkocht.")), "2026-10-18")
+    assert out["inschrijving_status"]["waarde"] == "onbekend"
+    assert out["inschrijving_status"]["reden"] == "status zonder datum van het loopje"
+
+
+def test_value_the_ai_missed_this_time_is_kept():
+    previous = dict(ANNOUNCED_RESULT)
+    now = dict(ANNOUNCED_RESULT, inschrijving_status=field("onbekend", "laag"))
+    assert merge(now, previous)["inschrijving_status"]["waarde"] == "nog_niet_open"
+
+
+def test_countdown_and_block_order_do_not_count_as_change():
+    a = "Lingezegen Marathon 134 dagen 17 uren 26 minuten 09 seconden tot het startschot. Volg ons."
+    b = "Volg ons. Lingezegen Marathon 133 dagen 2 uren 1 minuten 44 seconden tot het startschot."
+    assert fingerprint(a) == fingerprint(b)
+    assert fingerprint(a) != fingerprint(a.replace("Marathon", "Marathon uitverkocht"))
+
+
+class FakeResolve:
+    def __init__(self):
+        self.closed = []
+
+    def __call__(self, title, comment):
+        self.closed.append(title)
+        return 1
+
+
+def test_one_issue_per_race_and_closed_when_resolved(tmp_path):
+    unsure = dict(ANNOUNCED_RESULT, datum_loopje=field("2027-05-29", "hoog", "niet op de pagina"))
+    issues, resolve = FakeIssues(), FakeResolve()
+
+    def go(html, result, today):
+        return check_event(EVENT, fetch=lambda url: html, read=FakeAI(result), open_issue=issues,
+                           resolve_issues=resolve, data_dir=tmp_path, today=today)
+
+    assert go(HOME, unsure, "2026-10-16") == "controleren"
+    assert go(HOME_2027, unsure, "2026-10-17") == "controleren"  # page changed, still unsure
+    assert len(issues.opened) == 1
+
+    assert go(HOME_2027 + "<p>Nieuw blok</p>", ANNOUNCED_RESULT, "2026-10-18") == "eerste meting"
+    assert resolve.closed == ["Controleren: Stuwwalloop"]
+    assert "wacht_op_controle" not in state(tmp_path)
