@@ -1,10 +1,10 @@
 {
-  "gecontroleerd_op": "2026-10-22",
-  "hash": "c5497d3093c3ab42f5b73dd69653f20577457e0e5e5630e33c0a4ab48f918089",
+  "gecontroleerd_op": "2026-10-23",
+  "hash": "b6b96cc8e5fbb77f6e29562f51239a8336a0bdc6a982585fc552aeba615e9b24",
   "status": {
     "datum_loopje": {
       "bron_url": "https://derdekerstdagloop.nl/",
-      "bron_zin": "Op zondag 27 december 2026 organiseert atletiekvereniging Ciko'66 Physique Derde Kerstdagloop",
+      "bron_zin": "Zondag 27 december 2026 organiseert atletiekvereniging Ciko'66 Physique Derde Kerstdagloop",
       "waarde": "2026-12-27",
       "zekerheid": "hoog"
     },

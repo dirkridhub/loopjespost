@@ -1,6 +1,6 @@
 {
-  "gecontroleerd_op": "2026-10-22",
-  "hash": "a0f4892013782339eeadb13a3ffac4dba56a477fb8b7893b1ad2c4d090d8dcf5",
+  "gecontroleerd_op": "2026-10-23",
+  "hash": "8b3aaa368abaed9082146ca9086daaa1b813e793b324d8b57e742469acc8dfa2",
   "status": {
     "datum_loopje": {
       "bron_url": "https://www.freedomrunwageningen.nl/",
@@ -26,6 +26,5 @@
       "waarde": "open",
       "zekerheid": "middel"
     }
-  },
-  "wacht_op_controle": "https://github.com/dirkridhub/loopjespost/issues/6"
+  }
 }

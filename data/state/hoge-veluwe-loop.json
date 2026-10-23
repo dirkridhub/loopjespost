@@ -1,12 +1,12 @@
 {
-  "gecontroleerd_op": "2026-10-22",
-  "hash": "fa3684c263167cd9e1d697fd9a93ee398e09bf797b6181369b362e6647595ea5",
+  "gecontroleerd_op": "2026-10-23",
+  "hash": "6eab77536ae939779ac2b0c63723ae10ff9e83412daf7fc501074faaed93276d",
   "status": {
     "datum_loopje": {
-      "bron_url": "",
-      "bron_zin": "",
+      "bron_url": "https://hogeveluwe.nl/plan-je-bezoek/activiteiten/hoge-veluwe-loop",
+      "bron_zin": "Op 4 oktober 2026 wordt de 20e editie van de Hoge Veluwe Loop georganiseerd.",
       "waarde": "",
-      "zekerheid": "laag"
+      "zekerheid": "hoog"
     },
     "inschrijving_opent_datum": {
       "bron_url": "",
@@ -21,9 +21,10 @@
       "zekerheid": "laag"
     },
     "inschrijving_status": {
-      "bron_url": "https://hogeveluwe.nl/plan-je-bezoek/activiteiten/hoge-veluwe-loop",
-      "bron_zin": "Alle afstanden voor volwassenen zijn volgeboekt.",
-      "waarde": "vol",
+      "bron_url": "",
+      "bron_zin": "",
+      "reden": "status zonder datum van het loopje",
+      "waarde": "onbekend",
       "zekerheid": "hoog"
     }
   }

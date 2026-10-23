@@ -1,6 +1,6 @@
 {
-  "gecontroleerd_op": "2026-10-22",
-  "hash": "87d0bcdae455f63a5aa493f90db1f6db1d241a864d28e283117acc17848319b1",
+  "gecontroleerd_op": "2026-10-23",
+  "hash": "20e12408c5668e992c7fba74176e97d5c2da5d618f553946e43345e8c1a8d5ab",
   "status": {
     "datum_loopje": {
       "bron_url": "https://cairnadventures.nl/trail/veluwezoom-trail/",
@@ -22,7 +22,7 @@
     },
     "inschrijving_status": {
       "bron_url": "https://cairnadventures.nl/trail/veluwezoom-trail/",
-      "bron_zin": "Inschrijven alleen nog mogelijk voor de KIDSTRAIL! Andere afstanden zitten VOL!",
+      "bron_zin": "Andere afstanden zitten VOL!",
       "waarde": "vol",
       "zekerheid": "hoog"
     }

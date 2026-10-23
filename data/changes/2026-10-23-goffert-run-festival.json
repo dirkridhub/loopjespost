@@ -1,0 +1,23 @@
+[
+  {
+    "datum": "2026-10-23",
+    "loopje": "goffert-run-festival",
+    "naam": "Goffert Run Festival",
+    "wijzigingen": [
+      {
+        "bron_url": "https://7h.nl/goffert-run-festival",
+        "bron_zin": "Op zaterdag 18 april staat de vierde Seven Hills Record Run op het programma.",
+        "nieuw": "2027-04-18",
+        "oud": "",
+        "veld": "datum_loopje"
+      },
+      {
+        "bron_url": "https://7h.nl/goffert-run-festival",
+        "bron_zin": "Inschrijven voor de Seven Hills Record Run kan nog tot en met 6 april.",
+        "nieuw": "open",
+        "oud": "onbekend",
+        "veld": "inschrijving_status"
+      }
+    ]
+  }
+]

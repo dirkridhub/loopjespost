@@ -1,0 +1,16 @@
+[
+  {
+    "datum": "2026-10-23",
+    "loopje": "hoge-veluwe-loop",
+    "naam": "Hoge Veluwe Loop",
+    "wijzigingen": [
+      {
+        "bron_url": "",
+        "bron_zin": "",
+        "nieuw": "onbekend",
+        "oud": "vol",
+        "veld": "inschrijving_status"
+      }
+    ]
+  }
+]

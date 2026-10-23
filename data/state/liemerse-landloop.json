@@ -1,10 +1,10 @@
 {
-  "gecontroleerd_op": "2026-10-22",
-  "hash": "7388d8660fdf2a2956479b5c50fe5d6f1a3b050d0ac3b7f9838df19a11c063df",
+  "gecontroleerd_op": "2026-10-23",
+  "hash": "2665bf36fe8280c7811fde249ff4eb8224b2cf7eff7bf3e44acecee0161dc21d",
   "status": {
     "datum_loopje": {
       "bron_url": "https://liemerselandloop.nl/",
-      "bron_zin": "Op 23 mei 2027 zien we elkaar weer.",
+      "bron_zin": "Wie weet tot de volgende editie op Zondag 23 Mei 2027",
       "waarde": "2027-05-23",
       "zekerheid": "hoog"
     },
