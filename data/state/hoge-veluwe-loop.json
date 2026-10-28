@@ -1,6 +1,6 @@
 {
-  "gecontroleerd_op": "2026-10-27",
-  "hash": "133434035e0bb9d3546d484f473b85672e98d0d987b5ea32d233a3d3fa5f49a7",
+  "gecontroleerd_op": "2026-10-28",
+  "hash": "6eab77536ae939779ac2b0c63723ae10ff9e83412daf7fc501074faaed93276d",
   "status": {
     "datum_loopje": {
       "bron_url": "",
@@ -23,8 +23,9 @@
     "inschrijving_status": {
       "bron_url": "",
       "bron_zin": "",
+      "reden": "status zonder datum van het loopje",
       "waarde": "onbekend",
-      "zekerheid": "laag"
+      "zekerheid": "hoog"
     }
   }
 }
