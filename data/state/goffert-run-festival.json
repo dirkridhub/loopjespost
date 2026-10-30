@@ -1,28 +1,28 @@
 {
-  "gecontroleerd_op": "2026-10-29",
-  "hash": "7e2c5f2d2d0508ae0b87411e53a590eddcd92655e9e32d1e16a4f6f9c5c37121",
+  "gecontroleerd_op": "2026-10-30",
+  "hash": "9cce0d62d33c427284e8a8528a2417a003a165031cb8de5778a0a64466fbfdb5",
   "status": {
     "datum_loopje": {
       "bron_url": "https://7h.nl/goffert-run-festival",
-      "bron_zin": "Op zaterdag 18 april staat de vierde Seven Hills Record Run op het programma.",
-      "waarde": "2027-04-18",
-      "zekerheid": "middel"
+      "bron_zin": "Op zaterdag 17 april 2027 staat het Nijmeegse Goffertpark volledig in het teken van hardlopen en N.E.C.",
+      "waarde": "2027-04-17",
+      "zekerheid": "hoog"
     },
     "inschrijving_opent_datum": {
-      "bron_url": "",
-      "bron_zin": "",
-      "waarde": "",
-      "zekerheid": "laag"
+      "bron_url": "https://7h.nl/goffert-run-festival",
+      "bron_zin": "De inschrijving voor het Goffert Run Festival opent op maandag 2 november (12:00 uur).",
+      "waarde": "2026-11-02",
+      "zekerheid": "hoog"
     },
     "inschrijving_opent_tijd": {
-      "bron_url": "",
-      "bron_zin": "",
-      "waarde": "",
-      "zekerheid": "laag"
+      "bron_url": "https://7h.nl/goffert-run-festival",
+      "bron_zin": "De inschrijving voor het Goffert Run Festival opent op maandag 2 november (12:00 uur).",
+      "waarde": "12:00",
+      "zekerheid": "hoog"
     },
     "inschrijving_status": {
       "bron_url": "https://7h.nl/goffert-run-festival",
-      "bron_zin": "Inschrijven voor de Seven Hills Record Run kan nog tot en met 6 april.",
+      "bron_zin": "De inschrijving voor het Goffert Run Festival opent op maandag 2 november (12:00 uur).",
       "waarde": "open",
       "zekerheid": "hoog"
     }

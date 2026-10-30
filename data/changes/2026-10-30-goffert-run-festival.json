@@ -1,0 +1,30 @@
+[
+  {
+    "datum": "2026-10-30",
+    "loopje": "goffert-run-festival",
+    "naam": "Goffert Run Festival",
+    "wijzigingen": [
+      {
+        "bron_url": "https://7h.nl/goffert-run-festival",
+        "bron_zin": "Op zaterdag 17 april 2027 staat het Nijmeegse Goffertpark volledig in het teken van hardlopen en N.E.C.",
+        "nieuw": "2027-04-17",
+        "oud": "2027-04-18",
+        "veld": "datum_loopje"
+      },
+      {
+        "bron_url": "https://7h.nl/goffert-run-festival",
+        "bron_zin": "De inschrijving voor het Goffert Run Festival opent op maandag 2 november (12:00 uur).",
+        "nieuw": "2026-11-02",
+        "oud": "",
+        "veld": "inschrijving_opent_datum"
+      },
+      {
+        "bron_url": "https://7h.nl/goffert-run-festival",
+        "bron_zin": "De inschrijving voor het Goffert Run Festival opent op maandag 2 november (12:00 uur).",
+        "nieuw": "12:00",
+        "oud": "",
+        "veld": "inschrijving_opent_tijd"
+      }
+    ]
+  }
+]
