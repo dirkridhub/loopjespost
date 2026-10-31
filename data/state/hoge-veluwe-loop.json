@@ -1,6 +1,7 @@
 {
   "gecontroleerd_op": "2026-10-30",
   "hash": "6eab77536ae939779ac2b0c63723ae10ff9e83412daf7fc501074faaed93276d",
+  "laatste_fout": "2026-10-31: https://hogeveluwe.nl/plan-je-bezoek/activiteiten/hoge-veluwe-loop: 500 Server Error: Internal Server Error for url: https://hogeveluwe.nl/plan-je-bezoek/activiteiten/hoge-veluwe-loop",
   "status": {
     "datum_loopje": {
       "bron_url": "",
