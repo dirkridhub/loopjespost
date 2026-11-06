@@ -1,6 +1,6 @@
 {
-  "gecontroleerd_op": "2026-11-05",
-  "hash": "f78ece97eea32900ed86b0f057f587eb5b5853f07bc99e017dcf7d09afa3f684",
+  "gecontroleerd_op": "2026-11-06",
+  "hash": "78ed98bbb63ce5709e69ec0490a10d7e6583c0eb33ab68eb1ff5665a747c5ff2",
   "status": {
     "datum_loopje": {
       "bron_url": "https://zevenheuvelenloop.nl/",
@@ -22,7 +22,7 @@
     },
     "inschrijving_status": {
       "bron_url": "https://zevenheuvelenloop.nl/",
-      "bron_zin": "Uitverkocht Garmin Zevenheuvelenloop",
+      "bron_zin": "Uitverkocht Garmin Zevenheuvelenloop 15 november 2026",
       "waarde": "vol",
       "zekerheid": "hoog"
     }
