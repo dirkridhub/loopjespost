@@ -1,6 +1,6 @@
 {
-  "gecontroleerd_op": "2026-11-09",
-  "hash": "f1fac36f39e4f0458c1688ecb4a86c36dfb9d46efae187a0791958d2a3f83abe",
+  "gecontroleerd_op": "2026-11-10",
+  "hash": "7eed125e5f03103085c815900cab4f1b0846a228d590a57b376d2af22a712633",
   "status": {
     "datum_loopje": {
       "bron_url": "https://7h.nl/goffert-run-festival",
@@ -26,5 +26,6 @@
       "waarde": "open",
       "zekerheid": "hoog"
     }
-  }
+  },
+  "wacht_op_controle": "https://github.com/dirkridhub/loopjespost/issues/12"
 }
