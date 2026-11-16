@@ -1,0 +1,23 @@
+[
+  {
+    "datum": "2026-11-16",
+    "loopje": "zevenheuvelenloop",
+    "naam": "Garmin Zevenheuvelenloop",
+    "wijzigingen": [
+      {
+        "bron_url": "https://zevenheuvelenloop.nl/",
+        "bron_zin": "de start van de Garmin Zevenheuvelenloop is op zondag 15 november om 13:00 uur",
+        "nieuw": "",
+        "oud": "2026-11-15",
+        "veld": "datum_loopje"
+      },
+      {
+        "bron_url": "",
+        "bron_zin": "",
+        "nieuw": "onbekend",
+        "oud": "vol",
+        "veld": "inschrijving_status"
+      }
+    ]
+  }
+]

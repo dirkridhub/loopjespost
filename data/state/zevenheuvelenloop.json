@@ -1,29 +1,33 @@
 {
-  "gecontroleerd_op": "2026-11-15",
-  "hash": "36167e8ccf9dc4513dcfd5eb789b7f26020dd84e66cf35079dab9ec311b7ce14",
+  "gecontroleerd_op": "2026-11-16",
+  "hash": "9b601e2c5bcf9a1fbb5b74aa23dd1e0ef0db72455a2c92dace2ab9b6cebd8af2",
   "status": {
     "datum_loopje": {
       "bron_url": "https://zevenheuvelenloop.nl/",
       "bron_zin": "de start van de Garmin Zevenheuvelenloop is op zondag 15 november om 13:00 uur",
-      "waarde": "2026-11-15",
+      "reden": "vorige editie (2026-11-15)",
+      "waarde": "",
       "zekerheid": "hoog"
     },
     "inschrijving_opent_datum": {
       "bron_url": "",
       "bron_zin": "",
+      "reden": "vorige editie (2026-11-15)",
       "waarde": "",
-      "zekerheid": "laag"
+      "zekerheid": "hoog"
     },
     "inschrijving_opent_tijd": {
       "bron_url": "",
       "bron_zin": "",
+      "reden": "vorige editie (2026-11-15)",
       "waarde": "",
-      "zekerheid": "laag"
+      "zekerheid": "hoog"
     },
     "inschrijving_status": {
-      "bron_url": "https://zevenheuvelenloop.nl/",
-      "bron_zin": "Uitverkocht",
-      "waarde": "vol",
+      "bron_url": "",
+      "bron_zin": "",
+      "reden": "vorige editie (2026-11-15)",
+      "waarde": "onbekend",
       "zekerheid": "hoog"
     }
   }
