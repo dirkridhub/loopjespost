@@ -1,6 +1,6 @@
 {
-  "gecontroleerd_op": "2026-11-26",
-  "hash": "e3798690df3016189433ddd7f2d3639d5ac068219018dc4b2211712fd34b2239",
+  "gecontroleerd_op": "2026-11-27",
+  "hash": "024eeaf58d1cff2d30096cba1fd92ff37fe3a718896fb584a96e24a2c032b264",
   "status": {
     "datum_loopje": {
       "bron_url": "https://safaritrail.nl/",
@@ -26,5 +26,6 @@
       "waarde": "open",
       "zekerheid": "hoog"
     }
-  }
+  },
+  "wacht_op_controle": "https://github.com/dirkridhub/loopjespost/issues/13"
 }
